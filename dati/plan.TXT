@@ -1,0 +1,67 @@
+Tesi
+
+02/05/2012
+registrazione [*];
+login [*];
+distinzione login amministratore / user [*];
+
+03/05/2012
+visualizzazione tabella da database [*];
+prova visualizzazione tasto solo quando la variabile è attiva [*];
+introdurre le sessioni [*];
+
+04/05/2012
+sistemare le sessioni nei login [*];
+far vedere alcuni comandi solo quando si è loggati [*];
+miglioramento tabelle [*];
+
+07/05/2012
+inserimento nuovi record [*];
+aggiunta nuovi record tabella cd [*];
+ricerca dei prodotti nel database [*];
+
+08/05/2012
+implementazione algoritmi ricerca [*];
+master-detail della tabella dischi [*];
+copertine in formato più piccolo [*];
+
+10/05/2012
+miglioramento motore di ricerca + inclusione di upper_menu.php [*];
+
+14/05/2012
+far funzionare il carrello [*];
+implementazione del carrello [*];
+master-detail della tabella dischi [*];
+
+15/05/2012
+amministrazione utenti [*];
+
+16/05/2012
+
+finire form caricamento dati prodotti [*];
+
+16/06/2012
+scarica microsoft office visio [];
+correzione ciclo rss feed[];
+ordering div [];
+vedere perchè compare il campo 0 in automatico e correggere [];
+pagina 'chi siamo'[*];
+correggere le scritte di conferma di registrazione[];
+integrazione form per upload immagini [];
+correzione insert values [];
+parte gestionale grafica [];
+parte gestionale codice [];
+indentazione [];
+revisione funzioni e debug completo [];
+validazione w3c[];
+
+
+
+
+
+
+
+
+
+
+

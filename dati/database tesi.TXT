@@ -1,0 +1,104 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.3.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generato il: 19 giu, 2012 at 05:40 PM
+-- Versione MySQL: 5.1.33
+-- Versione PHP: 5.2.9
+
+
+CREATE DATABASE tesi;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `tesi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `dischi`
+--
+
+CREATE TABLE IF NOT EXISTS `dischi` (
+  `codice` int(10) NOT NULL AUTO_INCREMENT,
+  `artista` varchar(50) DEFAULT NULL,
+  `titolo` varchar(50) DEFAULT NULL,
+  `copertine` varchar(200) DEFAULT NULL,
+  `prezzo` decimal(3,2) DEFAULT NULL,
+  `genere` varchar(50) DEFAULT NULL,
+  `descrizione` text NOT NULL,
+  `voto` int(3) NOT NULL,
+  `disponibile` int(3) DEFAULT NULL,
+  `data` date NOT NULL,
+  `keywords` varchar(80) NOT NULL,
+  PRIMARY KEY (`codice`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=124 ;
+
+--
+-- Dump dei dati per la tabella `dischi`
+--
+
+INSERT INTO `dischi` (`codice`, `artista`, `titolo`, `copertine`, `prezzo`, `genere`, `descrizione`, `voto`, `disponibile`, `data`, `keywords`) VALUES
+(1, 'U2', 'The Joshua tree', 'u2_joshua.jpg', 8.00, 'rock', '1. 	"Where the Streets Have No Name"<br>	\r\n2. 	"I Still Haven''t Found What I''m Looking For"<br>	\r\n3. 	"With or Without You"<br>	\r\n4. 	"Bullet the Blue Sky"<br> 	\r\n5. 	"Running to Stand Still"<br>   		\r\n6. 	"Red Hill Mining Town"<br>   	\r\n7. 	"In God''s Country"<br>  	\r\n8. 	"Trip Through Your Wires"<br>  	\r\n9. 	"One Tree Hill"<br>   	\r\n10. 	"Exit"<br>   	\r\n11. 	"Mothers of the Disappeared"<br>  ', 4, 5, '2012-06-13', 'u2 the joshua tree \r\n\r\nrock '),
+(2, 'Rolling stones', 'Exile on main street', 'rolling_exile.jpg', 7.00, 'rock', '1. 	"Rocks Off"   	4:31<br>\r\n2. 	"Rip This Joint"   	2:22<br>\r\n3. 	"Shake Your Hips" (Slim Harpo) 	2:59<br>\r\n4. 	"Casino Boogie"   	3:33<br>\r\n5. 	"Tumbling Dice"   	3:45<br>\r\nSide two 	\r\nNo. 	Title 	Length 	\r\n6. 	"Sweet Virginia"   	4:27<br>\r\n7. 	"Torn and Frayed"   	4:17<br>\r\n8. 	"Sweet Black Angel"   	2:54<br>\r\n9. 	"Loving Cup"   	4:25<br>\r\nSide three 	\r\nNo. 	Title 	Length 	\r\n10. 	"Happy"   	3:04<br>\r\n11. 	"Turd on the Run"   	2:36<br>\r\n12. 	"Ventilator Blues" (Jagger/Richards/Mick Taylor) 	3:24<br>\r\n13. 	"I Just Want to See His Face"   	2:52<br>\r\n14. 	"Let It Loose"   	5:16<br>\r\nSide four 	\r\nNo. 	Title 	Length 	\r\n15. 	"All Down the Line"   	3:49<br>\r\n16. 	"Stop Breaking Down" (Robert Johnson) 	4:34<br>\r\n17. 	"Shine a Light"   	4:14<br>\r\n18. 	"Soul Survivor"  ', 3, 20, '2012-06-15', 'rolling stones exile on main street rock '),
+(3, 'Massive Attack ', '100th Windows', 'massattk_100.jpg', 9.99, 'elettronica', '1. 	"Future Proof" (vocals by 3D) 	5:37<br>\r\n2. 	"What Your Soul Sings" (vocals by Sinad O''Connor) 	6:37<br>\r\n3. 	"Everywhen" (vocals by Horace Andy) 	7:37<br>\r\n4. 	"Special Cases" (vocals by Sinad O''Connor) 	5:09<br>\r\n5. 	"Butterfly Caught" (vocals by 3D) 	7:33<br>\r\n6. 	"A Prayer for England" (vocals by Sinad O''Connor) 	5:44<br>\r\n7. 	"Small Time Shot Away" (vocals by 3D, backing vocals by 2D (Gorillaz)) 	7:57<br>\r\n8. 	"Name Taken" (vocals by Horace Andy) 	7:47<br>\r\n9. 	"Antistar" (vocals by 3D) 	8:17<br>\r\n10. 	"hidden track" (instrumental) 	11:23<br>', 5, 2, '2012-06-18', 'massive attack 100th windows elettronica'),
+(4, 'Lady Gaga', 'The Fame Monster', 'gaga_fame.jpg', 9.99, 'pop', '1. 	"Bad Romance" 4:54<br>\r\n2. 	"Alejandro"   		4:34<br>\r\n3. 	"Monster"   	 	4:10<br>\r\n4. 	"Speechless"   	 	4:31<br>\r\n5. 	"Dance in the Dark"   	 	4:49<br>\r\n6. 	"Telephone" (featuring Beyonc) 	 	3:41<br>\r\n7. 	"So Happy I Could Die" 	3:55<br>\r\n8. 	"Teeth"  <br>', 2, 20, '2012-06-21', 'lady gaga \r\n\r\nthe fame monster pop '),
+(5, 'Miles Davis', 'Kind Of Blue', 'davis_kind.jpg', 5.00, 'jazz', '1. 	"So What"   	9:22<br>\r\n2. 	"Freddie Freeloader"   	9:46<br>\r\n3. 	"Blue in Green" (Miles Davis and Bill Evans) 	5:37<br>\r\n4. 	"All Blues"   	11:33<br>\r\n5. 	"Flamenco Sketches" (Miles Davis and Bill Evans)<br>', 5, 35, '2012-06-10', 'miles \r\n\r\ndavis kind of blue jazz'),
+(6, 'Radiohead', 'Ok Computer', 'radio_okcomp.jpg', 9.99, 'rock', '    "Airbag"  4:44<br>\r\n    "Paranoid Android"  6:23<br>\r\n    "Subterranean Homesick Alien"  4:27<br>\r\n    "Exit Music (For a Film)"  4:24<br>\r\n    "Let Down"  4:59<br>\r\n    "Karma Police"  4:21<br>\r\n    "Fitter Happier"  1:57<br>\r\n    "Electioneering"  3:50<br>\r\n    "Climbing Up the Walls"  4:45<br>\r\n    "No Surprises"  3:48<br>\r\n    "Lucky"  4:19<br>\r\n    "The Tourist"  5:24<br>\r\n', 3, 80, '2012-06-05', 'radiohead \r\n\r\nok computer rock'),
+(7, 'Pink Floyd', 'Dark Side Of The Moon', 'pink_dkside.jpg', 9.99, 'rock', '1. 	"Speak to Me"   		1:30<br>\r\n2. 	"Breathe"   	 	2:43<br>\r\n3. 	"On the Run"   	 	3:36<br>\r\n4. 	"Time" (includes "Breathe (Reprise)") 	 	7:01<br>\r\n5. 	"The Great Gig in the Sky"   	 	4:36<br>	\r\n6. 	"Money"   	6:22<br>\r\n7. 	"Us and Them"   	 	7:46<br>\r\n8. 	"Any Colour You Like"  	3:25<br>\r\n9. 	"Brain Damage"   	3:48<br>\r\n10. 	"Eclipse"  <br>', 4, 10, '2012-06-17', 'pink floyd dark side of the moon rock '),
+(8, 'Nirvana', 'Nevermind', 'nirv_nvmind.jpg', 9.99, 'rock', '1. "Smells Like Teen Spirit"   5:01<br>\r\n2. "In Bloom"  4:14<br>\r\n3. "Come as You Are"  3:39<br>\r\n4. "Breed"  3:03<br>\r\n5. "Lithium"  4:17<br>\r\n6. "Polly"  2:57<br>\r\n7. "Territorial Pissings"  2:22<br>\r\n8. "Drain You"  3:43<br>\r\n9. "Lounge Act"  2:36<br>\r\n10. "Stay Away"  3:32<br>\r\n11. "On a Plain"  3:16<br>\r\n12. "Something in the Way"  3:55<br>', 3, 8, '2012-06-01', 'nirvana nevermind \r\n\r\nrock '),
+(9, 'Bruce Springsteen', 'Born In The Usa', 'brcs_bornusa.jpg', 9.99, 'rock', '1.    "Born in the U.S.A."  4:39<br>\r\n2.    "Cover Me"  3:27<br>\r\n3.    "Darlington County"  4:48<br>\r\n4.    "Working on the Highway"  3:11<br>\r\n5.    "Downbound Train"  3:35<br>\r\n6.    "I''m on Fire"  2:37<br>\r\n7.   "No Surrender"  4:00<br>\r\n8.   "Bobby Jean"  3:46<br>\r\n9.    "I''m Goin'' Down"  3:29<br>\r\n10.    "Glory Days"  4:15<br>\r\n11.    "Dancing in the Dark"  4:00<br>\r\n12.    "My Hometown"  4:34<br>\r\n', 5, 5, '2012-06-25', 'bruce springsteen born in the usa rock '),
+(10, 'Bruce Springsteen', 'Nebraska', 'brcs_nebraska.jpg', 9.99, 'rock', '1. 	"Nebraska"   	4:32<br>\r\n2. 	"Atlantic City"   	4:00<br>\r\n3. 	"Mansion on the Hill"   	4:08<br>\r\n4. 	"Johnny 99"   	3:44<br>\r\n5. 	"Highway Patrolman"   	5:40<br>\r\n6. 	"State Trooper"   	3:17<br>	\r\n7. 	"Used Cars"   	3:11<br>\r\n8. 	"Open All Night"   	2:58<br>\r\n9. 	"My Father''s House"   	5:07<br>\r\n10. 	"Reason to Believe" <br> ', 4, 3, '2012-06-19', 'bruce \r\n\r\nspringsteen nebraska rock '),
+(11, 'Converge', 'You Fail Me', 'conv_youf.jpg', 9.99, 'metal', 'Non disponibile ', 2, 2, '2012-05-14', 'converge you \r\n\r\nfail me metal '),
+(12, 'Converge', 'Axe To Fall', 'conv_axe.jpg', 7.50, 'metal', '1. 	"Dark Horse"   	  	  	2:54<br>\r\n2. 	"Reap What You Sow"   	  	 	2:39<br>\r\n3. 	"Axe to Fall"   	  		1:41<br>\r\n4. 	"Effigy"   		1:42<br>\r\n5. 	"Worms Will Feed/Rats Will Feast"   	  	  	5:52<br>\r\n6. 	"Wishing Well"   	  	2:49<br>\r\n7. 	"Damages"   	  	 	4:26<br>\r\n8. 	"Losing Battle"   	  	  	1:46<br>\r\n9. 	"Dead Beat"   	  	  	2:36<br>\r\n10. 	"Cutter"   	  	 	1:40<br>\r\n11. 	"Slave Driver"   	  	  	2:48<br>\r\n12. 	"Cruel Bloom"   	 	4:01<br>\r\n13. 	"Wretched World"  <br>', 2, 1, '2012-06-03', 'converge axe to \r\n\r\nfall metal '),
+(13, 'No Fx', 'I Eard They Suck Live', 'nofx_suck.jpg', 9.99, 'punk', '1.    "(Witty Banter)"  1:46<br>\r\n2.    "Linoleum"  2:15<br>\r\n3.    "You''re Bleeding"  2:36<br>\r\n4.    "Moron Brothers"  3:09<br>\r\n5.    "Punk Guy"  1:09<br>\r\n6.    "Bob"  2:36<br>\r\n7.    "Life O''Riley"  2:39<br>\r\n8.    "You Drink, You Drive, You Spill"  3:31<br>\r\n9.    "Nothing but a Nightmare (sorta)"  1:06<br>\r\n10.    "East Bay"  1:53<br>\r\n11.    "Soul Doubt"  3:00<br>\r\n12.    "Kill All The White Man"  3:43<br>\r\n13.    "Beer Bong"  2:16<br>\r\n14.    "Six Pack Girls"  1:12<br>\r\n15.    "Together On The Sand"  1:07<br>\r\n16.    "Nowhere"  1:37<br>\r\n17.    "The Brews"  2:41<br>\r\n18.    "Buggley Eyes"  1:31<br>\r\n19.    "(Crowd Leaves)"  0:53<br>\r\n', 2, 4, '2012-06-04', 'no fx i \r\n\r\neard they suck live punk '),
+(14, 'Bad Religion', 'New Maps Of Hell', 'bdreli_maps.jpg', 8.99, 'punk', 'Non disponibile ', 3, 8, '2012-05-24', 'bad \r\n\r\nreligion new maps of hell punk '),
+(15, 'Neil Young', 'Harvest', 'nyoung_harv.jpg', 7.99, 'rock', '1.    "Out on the Weekend"  4:34<br>\r\n2.    "Harvest"  3:11<br>\r\n3.    "A Man Needs a Maid"  4:05<br>\r\n4.    "Heart of Gold"  3:07<br>\r\n5.    "Are You Ready for the Country?"  3:23<br>\r\n6.    "Old Man"  3:24 <br>\r\n7.    "There''s a World"  2:59<br>\r\n8.    "Alabama"  4:02<br>\r\n9.    "The Needle and the Damage Done"  2:03 <br>\r\n10.    "Words (Between the Lines of Age)"  6:40 <br>\r\n', 5, 2, '2012-06-24', 'neil young \r\n\r\nharvest rock '),
+(16, 'Massive Attack', 'Mezzanine', 'massattk_mezza.jpg', 8.00, 'elettronica', '1. 	"Angel"   	6:19<br>\r\n2. 	"Risingson"  	4:58<br>\r\n3. 	"Teardrop"   	 	5:30<br>\r\n4. 	"Inertia Creeps"   	 	5:57<br>\r\n5. 	"Exchange"   	4:11<br>\r\n6. 	"Dissolved Girl"   	6:06<br>\r\n7. 	"Man Next Door"  	5:56<br>\r\n8. 	"Black Milk"  	6:21<br>\r\n9. 	"Mezzanine"   	 	5:56<br>\r\n10. 	"Group Four"   	 	8:12<br>\r\n11. 	"(Exchange)" (	4:10<br>\r\n12. 	"Superpredators" (Japanese bonus track)<br>', 3, 10, '2012-06-27', 'massive attack mezzanine elettronica');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `feed`
+--
+
+CREATE TABLE IF NOT EXISTS `feed` (
+  `id` int(11) NOT NULL,
+  `testo` text NOT NULL,
+  `data` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `feed`
+--
+
+INSERT INTO `feed` (`id`, `testo`, `data`) VALUES
+(1, 'In uscita il disco di X il mese prossimo ', '2012-06-10'),
+(2, 'in arrivo l''edizione da collezione di bla bla bla ', '2012-06-12'),
+(3, 'in arrivo dischi per il prossimo mese ', '2012-06-13');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `utenti`
+--
+
+CREATE TABLE IF NOT EXISTS `utenti` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `data` date NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `priorita` int(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dump dei dati per la tabella `utenti`
+--
+
+INSERT INTO `utenti` (`id`, `data`, `username`, `password`, `priorita`) VALUES
+(1, '2012-05-02', 'simone', '81dc9bdb52d04dc20036dbd8313ed055', 1),
+(2, '2012-06-16', 'user', 'e2fc714c4727ee9395f324cd2e7f331f', 0);
