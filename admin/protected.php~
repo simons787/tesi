@@ -1,0 +1,26 @@
+<?php
+session_start();
+
+$dest = "admin.php";
+
+if (!isset($_SESSION["admin"])){
+	header ("Location: ".$dest);
+	exit();
+}
+?>
+
+<html>
+<head>
+  <title>Zona privata</title>
+ </head>
+
+<body bgcolor="#deccdf">
+
+<center>
+	<h1>Complimenti sei nella zona privata</h1>
+	DATI PROTETTI......bla bla bla</a>
+	<br>
+	<a href="logout.php" >clicca per terminare la sessione</a>
+</center>
+</body>
+</html>
